@@ -46,7 +46,7 @@ namespace MVCOnlineTicariOtomasyon.Controllers
         {
             var ktgr=c.Kategoris.Find(k.KategoriID);
             ktgr.KategoriAd = k.KategoriAd;
-            c.SaveChanges();
+           c.SaveChanges();
             return RedirectToAction("index");
         }
     }
