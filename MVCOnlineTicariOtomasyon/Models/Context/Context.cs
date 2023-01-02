@@ -11,7 +11,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
     {
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Cariler> Carilers { get; set; }
-        public DbSet<Departman> Departman { get; set; }
+        public DbSet<Departman> Departmans { get; set; }
         public DbSet<Faturalar> Faturalars { get; set; }
         public DbSet<FaturaKalem> FaturaKalems { get; set; }
         public DbSet<Kategori> Kategoris { get; set; }

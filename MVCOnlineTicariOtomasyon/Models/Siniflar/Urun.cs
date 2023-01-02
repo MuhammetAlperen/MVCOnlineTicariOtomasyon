@@ -24,6 +24,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(250)]
         public string UrunGorsel { get; set; }
+        public int Kategoriid { get; set; }
  
         public virtual Kategori Kategori { get; set; }
 
