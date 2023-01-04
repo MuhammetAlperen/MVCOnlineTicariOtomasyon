@@ -12,21 +12,22 @@
         <th>DEPARTMAN ADI</th>
         <th>SİL</th>
         <th>GÜNCELLE</th>
+        <th>DETAY</th>
     </tr>
     @foreach (var k in Model)
     {
 
         <tr>
             <td>
-                @k.DepartmanID
+                @k.DepartmanID 
             </td>
 
             <td>
-                @k.DepartmanAdı
+                @k.DepartmanAd
             </td>
             <td><a href="/Departman/DepartmanSil/@k.DepartmanID" class="btn btn-danger">Sil</a></td>
             <td><a href="/Departman/DepartmanGetir/@k.DepartmanID" class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Departman/DepartmanGetir/@k.DepartmanID" class="btn btn-success" style="background-color:darksalmon">Detaylar</a></td>
+            <td><a href="/Departman/DepartmanDetay/@k.DepartmanID" class="btn btn-success" style="background-color:darksalmon">Detaylar</a></td>
 
 
         </tr>

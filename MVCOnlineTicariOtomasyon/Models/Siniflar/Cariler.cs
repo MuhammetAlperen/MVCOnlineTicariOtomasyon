@@ -31,7 +31,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string CariMail { get; set; }
-
+        public bool Durum { get; set; }
         public ICollection<SatisHareketleri> satisHareketleris { get; set; }
     }
 }

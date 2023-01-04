@@ -8,28 +8,30 @@
 <br />
 <h2>Departman Detay Sayfası</h2>
 <br />
-<div style="background-color:darkgrey">
-    Deneme
-</div>
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Departman Adı: @ViewBag.s</li>
+    </ol>
 <br />
-<table class="table table-havor">
-    <tr>
-        <th>PERSONEL ID</th>
-        <th>AD</th>
-        <th>SOYAD</th>
-        <th>GÖRSEL</th>
-        <th>SATIŞLAR</th>
-    </tr>
-    @foreach (var x in Model)
-    {
+    <table class="table table-havor">
         <tr>
-            <td>@x.PersonelID</td>
-            <td>@x.PersonelAd</td>
-            <td>@x.PersonelSoyad</td>
-            <td>@x.PersonelGorsel</td>
-            <td><a href="#" class="btn btn-default" style="background-color:orange">Satışlar</a></td>
+            <th>PERSONEL ID</th>
+            <th>AD</th>
+            <th>SOYAD</th>
+            <th>GÖRSEL</th>
+            <th>SATIŞLAR</th>
         </tr>
-    }
+        @foreach (var x in Model)
+        {
+            <tr>
+
+                <td>@x.PersonelID</td>
+                <td>@x.PersonelAd</td>
+                <td>@x.PersonelSoyad</td>
+                <td>@x.PersonelGorsel</td>
+                <td><a href="/Departman/DepartmanPersonelSatıs/@x.PersonelID" class="btn btn-default" style="background-color:orange">Satışlar</a></td>
+            </tr>
+        }
 
 
-</table>
+    </table>
