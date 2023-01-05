@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -39,18 +40,30 @@ namespace MVCOnlineTicariOtomasyon.Controllers
         }
         public ActionResult CariGetir(int id)
         {
-            var cr = c.Carilers.Find(id);
-            return View("CariGetir", cr);
+            var Cariler = c.Carilers.Find(id);
+            return View("CariGetir", Cariler);
         }
         public ActionResult CariGuncelle(Cariler p) 
         {
-            var cri = c.Carilers.Find(p.CariID);
-            cri.CariAd=p.CariAd;
-            cri.CariSoyad=p.CariSoyad;
-            cri.CariSehir=p.CariSehir;
-            cri.CariMail=p.CariMail;
+            if (!ModelState.IsValid)
+            {
+                return View("CariGetir");
+            }
+            var cari = c.Carilers.Find(p.CariID);
+            cari.CariAd = p.CariAd;
+            cari.CariSoyad = p.CariSoyad;
+            cari.CariSehir = p.CariSehir;
+            cari.CariMail = p.CariMail;
             c.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("İndex");
+        }
+        public ActionResult MusteriSatıs(int id)
+        {
+            var degeler = c.satisHareketleris.Where(x => x.Cariid == id).ToList();
+            var car = c.Carilers.Where(x => x.CariID == id).Select(y => y.CariAd + " " + y.CariSoyad).FirstOrDefault();
+            ViewBag.cari = car;
+            return View(degeler);
+
         }
     }
 }
