@@ -8,22 +8,20 @@
 <h2>Yeni Personel Sayfası</h2>
 <br />
 
-<form class="from-group" method="post">
-    @Html.HiddenFor(x => x.PersonelID)
-    @Html.LabelFor(x => x.PersonelAd)
-    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "from-control" })
+<from class="from-gruop" method="post">
+    @Html.HiddenFor(x=>x.PersonelID)
+    @Html.LabelFor(x=>x.PersonelAd)
+    @Html.TextBoxFor(x=>x.PersonelAd,new {@class="from-control"})
+  
+    @Html.LabelFor(x=>x.PersonelSoyad)
+    @Html.TextBoxFor(x=>x.PersonelSoyad, new {@class="from-control"})
+    
+    @Html.LabelFor(x=>x.PersonelGorsel)
+    @Html.TextBoxFor(x => x.PersonelGorsel, new {@class="from-control"})
+  
+    @Html.LabelFor(x=>x.Departman)
+    @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new {@class="from-conrol"})
     <br />
-    <br />
-    @Html.LabelFor(x => x.PersonelSoyad)
-    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "from-control" })
-    <br />
-    <br />
-    @Html.LabelFor(x => x.PersonelGorsel)
-    @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "from-control" })
-    <br />
-    <br />
-    @Html.LabelFor(x => x.Departman.DepartmanID)
-    @Html.TextBoxFor(x =>x.Departmanid , new { @class = "from-control" })
     <br />
     <button class="btn btn-info">Kaydet</button>
-</form>
+</from>

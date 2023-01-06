@@ -23,10 +23,10 @@
             <td>@k.PersonelAd</td>
             <td>@k.PersonelSoyad</td>
             <td>@k.PersonelGorsel</td>
-            <td>@k.Departmanid</td>
+            <td>@k.Departman.DepartmanAd</td>
             <td><a href="/Personel/PersonelSil/@k.PersonelID" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
-            <td><a href="#" class="btn btn-default" style="background-color:darksalmon">Satış Geçmişi</a></td>
+            <td><a href="/Personel/PersonelGetir/@k.PersonelID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanPersonelSatıs/@k.PersonelID" class="btn btn-default" style="background-color:darksalmon">Satış Geçmişi</a></td>
         </tr>
     }
 </table>
