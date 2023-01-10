@@ -10,7 +10,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
     public class FaturaKalem
     {
         [Key]
-        public int FaturaID { get; set; }
+        public int FaturaKalemID { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(100)]
@@ -18,7 +18,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         public int Miktar { get; set; }
         public decimal BirimFiyat { get; set; }
         public decimal Tutar { get; set; }
-
-        public Faturalar Faturalar { get; set; }
+        public int Faturaid { get; set; }
+        public virtual Faturalar Faturalar { get; set; }
     }
 }
