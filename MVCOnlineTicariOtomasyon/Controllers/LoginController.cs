@@ -49,7 +49,7 @@ namespace MVCOnlineTicariOtomasyon.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
-        [HttpGet]
+        [HttpGet] 
         public ActionResult AdminLogin()
         {
             return View();

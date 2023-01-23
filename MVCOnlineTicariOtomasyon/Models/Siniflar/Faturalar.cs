@@ -38,6 +38,8 @@ namespace MVCOnlineTicariOtomasyon.Models.Siniflar
         [StringLength(30)]
         public string TeslimAlan { get; set; }
 
+        public decimal Toplam { get; set; }
+
         public ICollection<FaturaKalem> FaturaKalems { get; set; }
     }
 }

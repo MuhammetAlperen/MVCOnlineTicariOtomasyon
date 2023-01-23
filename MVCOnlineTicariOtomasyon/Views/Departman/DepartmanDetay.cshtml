@@ -15,20 +15,13 @@
 <br />
     <table class="table table-havor">
         <tr>
-            <th>PERSONEL ID</th>
-            <th>AD</th>
-            <th>SOYAD</th>
-            <th>GÖRSEL</th>
+            <th>PERSONEL</th>
             <th>SATIŞLAR</th>
         </tr>
         @foreach (var x in Model)
         {
             <tr>
-
-                <td>@x.PersonelID</td>
-                <td>@x.PersonelAd</td>
-                <td>@x.PersonelSoyad</td>
-                <td>@x.PersonelGorsel</td>
+                <td>@x.PersonelAd @x.PersonelSoyad</td>
                 <td><a href="/Departman/DepartmanPersonelSatıs/@x.PersonelID" class="btn btn-default" style="background-color:orange">Satışlar</a></td>
             </tr>
         }

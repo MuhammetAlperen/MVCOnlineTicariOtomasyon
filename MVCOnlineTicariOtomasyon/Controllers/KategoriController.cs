@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCOnlineTicariOtomasyon.Models.Siniflar;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MVCOnlineTicariOtomasyon.Controllers
 {
@@ -12,9 +14,9 @@ namespace MVCOnlineTicariOtomasyon.Controllers
     {
         // GET: Kategori
         Context c = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa=1)
         {
-            var değerler=c.Kategoris.ToList();
+            var değerler=c.Kategoris.ToList().ToPagedList(sayfa , 7);
             return View(değerler);
         }
         [HttpGet]
